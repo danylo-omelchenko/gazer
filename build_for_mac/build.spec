@@ -35,8 +35,8 @@ exe = EXE(
 
 app = BUNDLE(
     exe,
-    name='main.app',
-    icon='../resources/icon.icns',
+    name='Gazer.app',
+    icon='../resources/gazer.icns',
     bundle_identifier=None,
     info_plist={
         'NSHighResolutionCapable': 'True'})

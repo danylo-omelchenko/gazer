@@ -6,4 +6,4 @@ rm -r -f build dist
 
 pyinstaller -F -d -w build.spec
 
-./dist/main.app/Contents/MacOS/main
+./dist/Gazer.app/Contents/MacOS/main

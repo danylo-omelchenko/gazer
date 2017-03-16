@@ -1,4 +1,6 @@
-# [app name TBD]
+<img src="https://github.com/daniil-omelchenko/gazer/blob/master/resources/gazer.png" width="90">
+
+# Gazer
 
 ## How to build
 
