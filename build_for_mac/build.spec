@@ -1,7 +1,17 @@
 # -*- mode: python -*-
+import os
 
 block_cipher = None
 
+# collect resources
+RESOURCE_ROOT = 'resources'
+datas = []
+for dirpath, _, filenames in os.walk(os.path.join('..', RESOURCE_ROOT)):
+    for filename in filenames:
+        datas.append((
+            os.path.join(dirpath.replace('../', ''), filename),
+            os.path.join(dirpath, filename),
+            'DATA'))
 
 a = Analysis(
     ['../main.py'],
@@ -15,6 +25,8 @@ a = Analysis(
     win_no_prefer_redirects=False,
     win_private_assemblies=False,
     cipher=block_cipher)
+
+a.datas.extend(datas)
 
 pyz = PYZ(
     a.pure,

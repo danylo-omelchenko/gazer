@@ -2,10 +2,11 @@ import sys
 
 from PyQt5 import QtWidgets
 
-from windows.connect_to_aws import ConnectToAws
+from windows.start import StartWindow
 
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    gui = ConnectToAws()
+    gui = StartWindow()
+    gui.show()
     sys.exit(app.exec_())
