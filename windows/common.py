@@ -10,10 +10,20 @@ def resource_path(relative_path):
     return os.path.join(os.path.abspath("."), relative_path)
 
 
-class UiWindow(QtWidgets.QMainWindow):
+class Ui:
     ui = None
+    parent = None
 
-    def __init__(self):
+    def __init__(self, parent=None):
         super().__init__()
+        self.parent = parent
         if self.ui:
             uic.loadUi(resource_path(self.ui), self)
+
+
+class UiWindow(QtWidgets.QMainWindow, Ui):
+    pass
+
+
+class UiWidget(QtWidgets.QWidget, Ui):
+    pass

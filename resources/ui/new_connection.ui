@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>347</width>
+    <width>299</width>
     <height>305</height>
    </rect>
   </property>
@@ -16,6 +16,15 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <property name="leftMargin">
+     <number>12</number>
+    </property>
+    <property name="topMargin">
+     <number>12</number>
+    </property>
+    <property name="rightMargin">
+     <number>12</number>
+    </property>
+    <property name="bottomMargin">
      <number>12</number>
     </property>
     <item>
@@ -31,7 +40,7 @@
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>Access Id</string>
+       <string>Access Key Id</string>
       </property>
      </widget>
     </item>
@@ -64,17 +73,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QComboBox" name="region_cmb">
-      <property name="editable">
-       <bool>false</bool>
-      </property>
-      <property name="currentText">
-       <string/>
-      </property>
-      <property name="modelColumn">
-       <number>-1</number>
-      </property>
-     </widget>
+     <widget class="QComboBox" name="region_cmb"/>
     </item>
     <item>
      <spacer name="verticalSpacer">
@@ -91,8 +90,14 @@
     </item>
     <item>
      <widget class="QDialogButtonBox" name="dialog_box">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
       <property name="standardButtons">
        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+      <property name="centerButtons">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -103,7 +108,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>347</width>
+     <width>299</width>
      <height>22</height>
     </rect>
    </property>
@@ -123,6 +128,22 @@
     </hint>
     <hint type="destinationlabel">
      <x>173</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dialog_box</sender>
+   <signal>accepted()</signal>
+   <receiver>connection_window</receiver>
+   <slot>save_connection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
      <y>152</y>
     </hint>
    </hints>

@@ -23,3 +23,7 @@ def fetch_events(domain, run_id, workflow_id):
 
             if event['eventType'] == 'WorkflowExecutionCompleted':
                 completed = True
+
+
+def all_regions():
+    return boto.swf.get_regions('swf')
